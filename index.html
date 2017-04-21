@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <style media="screen">
+        div {
+            padding : 0.25em
+        }
+
+        .container {
+            width : 80%;
+            margin : auto;
+            background-color: dodgerblue;
+        }
+
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+    <script class="colorsTableTemplate" type="text/handlebars-x">
+        {{#each colors}}
+        <tr>
+            <td>{{name}}</td>
+            <td>{{opacity}}</td>
+        </tr>
+        {{/each}}
+    </script>
+
+    <script class="colorsDropdownTemplate" type="text/handlebars-x">
+        {{#each colorList}}
+            <option>{{name}}</value>
+        {{/each}}
+    </script>
+
+    <script class="opacityDropdownTemplate" type="text/handlebars-x">
+        {{#each colorList}}
+            <option>{{opacity}}</value>
+        {{/each}}
+    </script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="">
+
+            <select class="colors" name="">
+
+            </select>
+        </div>
+
+        <div class="">
+            <select class="opacities" name="">
+
+            </select>
+        </div>
+        <div class="">
+            <input type="button" name="" class="showColor" value="Show color">
+        </div>
+
+        <hr>
+
+        <div class="">
+            <input type="text" class="color" placeholder="type your color here">
+        </div>
+
+        <div class="">
+            <input type="text" class="opacity" placeholder="type opacity here">
+
+        </div>
+
+        <div class="">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Color name</th>
+                        <th>Color opacity</th>
+                    </tr>
+                </thead>
+                <tbody class="colorsTable">
+
+                </tbody>
+            </table>
+        </div>
+
+
+
+        <div class="">
+            <input type="button" name="" class="addColor" value="Add color">
+        </div>
+    </div>
+
+</body>
+<script src="colors.js" charset="utf-8"></script>
+</html>
